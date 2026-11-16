@@ -20,11 +20,27 @@
 }
 body { background: var(--bg); }
 .top {
-  min-height: 152px;
+  min-height: 168px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(92px, 34%);
+  column-gap: 16px;
   padding: 22px clamp(16px, 3vw, 32px);
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: #ede6f5;
+  background: #f1e7d3;
+}
+.top::after {
+  content: '';
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 130px;
+  border-radius: 10px;
+  background: #d7ad74 url('../grid-afternoon.jpg') 50% 53% / cover no-repeat;
+  background-size: max(135%, 265px) auto;
+}
+.top .pill { justify-self: start; }
+@media (max-width: 650px) {
+  .top::after { grid-row: 1; min-height: 92px; background-size: max(135%, 155px) auto; }
 }
 .top .pill, .toast, .stat, .player, .btn, .btn.danger, select, input, .choice {
   background: #f3edf8;
