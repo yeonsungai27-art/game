@@ -26,7 +26,7 @@ body { background: var(--bg); }
   padding: 18px clamp(14px, 3vw, 34px);
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: #edf1d7;
+  background: #eee9d0;
 }
 .top::after {
   content: '';
@@ -34,7 +34,8 @@ body { background: var(--bg); }
   grid-row: 1 / span 2;
   min-height: 116px;
   border-radius: 10px;
-  background: #efebe6 url('../snake-cover.jpg') center 31% / cover no-repeat;
+  background: #d7ad74 url('../snake-afternoon.jpg') 58% 33% / cover no-repeat;
+  background-size: max(133%, 220px) auto;
 }
 .brand { align-self: end; }
 .topnote { grid-column: 1; align-self: start; }
@@ -58,7 +59,7 @@ body { background: var(--bg); }
 .pip.on1, .pip.on2 { box-shadow: none; }
 @media (max-width: 500px) {
   .top { grid-template-columns: minmax(0, 1fr) 86px; gap: 8px; }
-  .top::after { min-height: 98px; }
+  .top::after { min-height: 98px; background-size: 175px auto; }
   .brandmark { display: none; }
   .brand h1 { letter-spacing: 0; overflow-wrap: anywhere; }
 }
